@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Best Friend 🤎</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+/* BASE RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#f4ede4;font-family:Poppins;color:#4b2f1a;overflow-x:hidden;}
+a{cursor:pointer;}
+
+/* NAVBAR */
+nav{
+position:sticky;top:0;background:#fff6ec;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 15px rgba(0,0,0,0.08);z-index:999;
+}
+.logo{font-family:Pacifico;font-size:26px;color:#9c6b43;}
+.nav-links a{margin-left:25px;text-decoration:none;color:#4b2f1a;padding:10px 14px;border-radius:12px;transition:0.3s;position:relative;}
+.nav-links a:hover{background:#ecd6bf;}
+
+/* PAGE */
+.page{display:none;padding:80px 10%;animation:fade 0.6s ease;}
+.page.active{display:block;}
+@keyframes fade{from{opacity:0; transform:translateY(20px);}to{opacity:1; transform:none;}}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#fff6ec,#ecd6bf);padding:80px;border-radius:30px;text-align:center;margin-bottom:70px;}
+.hero h1{font-family:Playfair Display;font-size:55px;color:#9c6b43;}
+.hero p{margin-top:15px;font-size:20px;max-width:700px;margin-inline:auto;}
+
+/* TITLES */
+.section-title{font-size:34px;margin-bottom:25px;color:#7a4a25;}
+
+/* BOX */
+.box{background:white;padding:40px;border-radius:25px;box-shadow:0 0 20px rgba(0,0,0,0.05);margin-bottom:40px;transition:0.3s;}
+.box:hover{transform:translateY(-8px);}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;}
+
+/* GALLERY */
+.gallery img{width:100%;border-radius:20px;transition:0.3s;}
+.gallery img:hover{transform:scale(1.05);}
+
+/* GAME */
+#gameBox{text-align:center;}
+#score{font-size:24px;margin-bottom:20px;}
+#catchGame{border:2px solid #a67c43;width:100%;height:400px;background:#fff6ec;position:relative;overflow:hidden;border-radius:20px;}
+#basket{position:absolute;bottom:10px;width:80px;height:30px;background:#a67c43;border-radius:15px;}
+.falling{position:absolute;width:30px;height:30px;background:#d1a17c;border-radius:50%;text-align:center;line-height:30px;font-size:20px;color:white;font-weight:bold;}
+
+/* MEME PRANK */
+#memeBox img{width:150px;margin:10px;border-radius:15px;transition:0.3s;}
+#memeBox img:hover{transform:scale(1.05);}
+
+/* LETTER */
+textarea,input,button,select{width:100%;padding:12px;margin-top:12px;border-radius:10px;border:1px solid #ccc;}
+input[type=submit],button{background:#a67c43;color:white;border:none;font-size:16px;margin-top:20px;padding:12px;cursor:pointer;}
+
+/* FOOTER */
+footer{padding:70px;text-align:center;color:#8a6b4f;}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Bestie 🤎</div>
+<div class="nav-links">
+<a onclick="openPage('home')">Home</a>
+<a onclick="openPage('about')">About You</a>
+<a onclick="openPage('timeline')">Timeline</a>
+<a onclick="openPage('memes')">Memes</a>
+<a onclick="openPage('gallery')">Gallery</a>
+<a onclick="openPage('game')">Catch Game</a>
+<a onclick="openPage('letter')">Letter</a>
+</div>
+</nav>
+
+<!-- ================= HOME ================= -->
+<div id="home" class="page active">
+<div class="hero"><h1>To My Best Friend</h1><p>The person who makes my world brighter every single day.</p></div>
+<div class="box">
+<p>You are my rock, my laughter, my safe place. Life is so much better with you by my side. Thank you for being YOU.</p>
+</div>
+<div class="box">
+<p>Our friendship is a journey I will always treasure. We’ve shared endless laughs, silly fights, and countless unforgettable moments.</p>
+</div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div id="about" class="page">
+<div class="hero"><h1>About You</h1><p>The most amazing human I know.</p></div>
+<div class="grid">
+<div class="box">Kind & Caring</div>
+<div class="box">Fun & Silly</div>
+<div class="box">Strong & Supportive</div>
+<div class="box">Beautiful Soul</div>
+</div>
+<div class="box">
+<p>Everything about you inspires me to be a better person. I can’t imagine life without your laughter and guidance.</p>
+</div>
+</div>
+
+<!-- ================= TIMELINE ================= -->
+<div id="timeline" class="page">
+<div class="hero"><h1>Our Friendship Timeline</h1><p>A trip down memory lane.</p></div>
+<div class="box">
+<h2 class="section-title">2019 - First Meet</h2>
+<p>We met randomly and instantly clicked. Who knew it would turn into the most amazing friendship?</p>
+</div>
+<div class="box">
+<h2 class="section-title">2020 - Crazy Adventures</h2>
+<p>Late-night talks, random trips, inside jokes that never get old.</p>
+</div>
+<div class="box">
+<h2 class="section-title">2021 - Support & Growth</h2>
+<p>Through ups and downs, we stood by each other, proving real friendship never fades.</p>
+</div>
+<div class="box">
+<h2 class="section-title">2022-Present - Forever</h2>
+<p>Every moment now is cherished. Memories, laughter, and endless fun together.</p>
+</div>
+</div>
+
+<!-- ================= MEME PRANK ================= -->
+<div id="memes" class="page">
+<div class="hero"><h1>Will You Marry Me? (Funny Prank)</h1><p>Try to click No 😏</p></div>
+<div class="box" id="memePrank">
+<button id="yesBtn">Yes ❤️</button>
+<button id="noBtn">No 😅</button>
+<div id="memeBox" class="grid"></div>
+</div>
+</div>
+
+<!-- ================= GALLERY ================= -->
+<div id="gallery" class="page">
+<div class="hero"><h1>Photo Gallery</h1><p>Some of our amazing moments.</p></div>
+<div class="grid gallery">
+<img src="https://picsum.photos/300/300?1">
+<img src="https://picsum.photos/300/300?2">
+<img src="https://picsum.photos/300/300?3">
+<img src="https://picsum.photos/300/300?4">
+<img src="https://picsum.photos/300/300?5">
+<img src="https://picsum.photos/300/300?6">
+</div>
+</div>
+
+<!-- ================= GAME ================= -->
+<div id="game" class="page">
+<div class="hero"><h1>Catch The Falling Hearts Game</h1><p>Use Left/Right arrows to catch the hearts!</p></div>
+<div class="box" id="gameBox">
+<div id="score">Score: 0</div>
+<div id="catchGame">
+<div id="basket"></div>
+</div>
+</div>
+</div>
+
+<!-- ================= LETTER ================= -->
+<div id="letter" class="page">
+<div class="hero"><h1>A Letter For You</h1><p>From my heart.</p></div>
+<div class="box">
+<p>Dear Bestie,<br>
+Thank you for being in my life. Your friendship means everything. I promise to always be there for you.<br><br>
+Love, Me ❤️</p>
+</div>
+</div>
+
+<footer><p>Made with love 🤎 for my best friend</p></footer>
+
+<script>
+function openPage(page){
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+document.getElementById(page).classList.add("active");
+window.scrollTo(0,0);
+}
+
+/* ===== MEME PRANK ===== */
+const noBtn=document.getElementById("noBtn");
+const yesBtn=document.getElementById("yesBtn");
+const memeBox=document.getElementById("memeBox");
+const memeImages=[
+"https://i.imgflip.com/7k5z1g.jpg",
+"https://i.imgflip.com/7k5z9t.jpg",
+"https://i.imgflip.com/7k5zdl.jpg",
+"https://i.imgflip.com/7k5ze0.jpg"
+];
+noBtn.addEventListener("mouseover",()=>{
+let meme=document.createElement("img");
+meme.src=memeImages[Math.floor(Math.random()*memeImages.length)];
+memeBox.appendChild(meme);
+noBtn.style.position="absolute";
+noBtn.style.top=Math.random()*200+"px";
+noBtn.style.left=Math.random()*300+"px";
+});
+yesBtn.addEventListener("click",()=>{alert("Yay! ❤️ You clicked YES!");});
+
+/* ===== CATCH HEARTS GAME ===== */
+let score=0;
+const basket=document.getElementById("basket");
+const catchGame=document.getElementById("catchGame");
+let basketPos=160;
+basket.style.left=basketPos+"px";
+
+document.addEventListener("keydown",(e)=>{
+if(e.key==="ArrowLeft"){basketPos=Math.max(basketPos-20,0);}
+if(e.key==="ArrowRight"){basketPos=Math.min(basketPos+20,catchGame.offsetWidth-80);}
+basket.style.left=basketPos+"px";
+});
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.className="falling";
+heart.innerText="❤️";
+heart.style.left=Math.random()*(catchGame.offsetWidth-30)+"px";
+heart.style.top="-30px";
+catchGame.appendChild(heart);
+
+let fallInterval=setInterval(()=>{
+let top=parseInt(heart.style.top);
+if(top>=catchGame.offsetHeight-40 && parseInt(heart.style.left)>=basketPos-10 && parseInt(heart.style.left)<=basketPos+80){
+score++;
+document.getElementById("score").innerText="Score: "+score;
+heart.remove();
+clearInterval(fallInterval);
+}else if(top>catchGame.offsetHeight){
+heart.remove();
+clearInterval(fallInterval);
+}else{
+heart.style.top=top+5+"px";
+}
+},30);
+}
+
+setInterval(createHeart,1000);
+
+</script>
+</body>
+</html>
